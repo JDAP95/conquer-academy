@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="../img/logo.svg" alt="logo">
+        <nav>
+          <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./quienes_somos.html">Quiénes somos</a></li>
+            <li><a href="./cursos.html">Cursos</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="registro">
+      <div class="container">
+        <h1>Registro</h1>
+        <form action="" method="get">
+          <div>
+            <label for="name">Nombre</label><br>
+            <input type="text" name="name" id="name">
+          </div>
+          <div>
+            <label for="lastname">Apellidos</label><br>
+            <input type="text" name="lastname" id="lastname">
+          </div>
+          <div>
+            <label for="fecha_nacimiento">Fecha de Nacimiento</label><br>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+          </div>
+          <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email">
+          </div>
+          <div>
+            <label for="address">Dirección</label><br>
+            <input type="text" name="address" id="address">
+          </div>
+          <div>
+            <label for="url">Página Web</label><br>
+            <input type="url" name="url" id="url">
+          </div>
+          <div>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto">
+          </div>
+          <div>
+            <label for="biografia">Biografía</label><br>
+            <textarea name="biografia" id="biografia"></textarea>
+          </div>
+          <div>
+            <button>Registrar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <a href="#">Aviso legal</a>
+        <p>© ConquerAcademy 2024 - Todos los derechos reservados</p>
+      </div>
+    </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

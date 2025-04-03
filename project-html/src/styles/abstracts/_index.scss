@@ -1,0 +1,44 @@
+@use "./mixins" as m;
+@use "./variables" as v;
+
+.index {
+    height: 100vh;
+    background-color: v.$secondary-color;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+
+        h1 {
+            @include m.title-style();
+            font-size: 70px;
+        }
+
+        nav {
+            ul {
+                @include m.reset-list();
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    text-decoration: none;
+                    padding: 10px 20px;
+
+                    &:hover {
+                        background-color: v.$primary-color;
+                        color: v.$secondary-color;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+
+    div {
+        width: 50%;
+
+        input, textarea {
+            border: none;
+            border-bottom: 1px solid v.$secondary-color;
+            width: 100%;
+            outline: none;
+
+            &:focus {
+                border: none;
+                border-bottom: 1px solid v.$secondary-color;
+            }
+        }
+    }
+
+    div:last-of-type {
+        text-align: right;
+
+        button {
+            border: none;
+            padding: 10px 25px 10px 25px;
+            border-radius: 10px;
+            background-color: v.$primary-color;
+            color: v.$secondary-color;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+    }
+}

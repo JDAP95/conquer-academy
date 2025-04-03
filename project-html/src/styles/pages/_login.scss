@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.login {
+    margin-bottom: 40px;
+
+    h1 {
+        @include m.title-style();
+    }
+}

@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.blog {
+    margin-bottom: 40px;
+    
+    .news {
+        padding-left: 40px;
+        padding-right: 40px;
+        &-title {
+            font-family: v.$font-title;
+            font-weight: 400;
+            font-size: 45px;
+            text-align: center;
+        }
+
+        &-news {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            &-new {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    font-weight: 600;
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            color: v.$secondary-color;
+                        }
+                    }
+                }
+
+                div {
+                    img {
+                        width: 350px;
+                        height: 250px;
+                    }
+                }
+
+                p {
+                    width: 65%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

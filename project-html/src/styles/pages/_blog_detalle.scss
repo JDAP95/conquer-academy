@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.blog-detalle {
+    margin-bottom: 40px;
+
+    .container {
+        h1 {
+            @include m.title-style();
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+    
+        .cabecera {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            
+            img {
+                border-radius: 30%;
+            }
+            
+            div {
+                align-self: center;
+    
+                p:first-of-type {
+                    font-weight: bold;
+                }
+
+                p {
+                    align-self: center;
+                }
+            }
+
+            .noticia-img-2 {
+                width: 50%;
+            }
+        }
+    }
+}

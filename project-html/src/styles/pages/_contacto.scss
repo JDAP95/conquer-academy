@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.contacto {
+    margin-bottom: 40px;
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr;
+        gap: 30px;
+
+        &-info {
+            grid-area: 1 / 1 / span 1 / span 2;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                @include m.title-style();
+            }
+
+            ul {
+                @include m.reset-list();
+            }
+        }
+
+        &-location {
+            h2 {
+                font-weight: 600;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            iframe {
+                color: v.$primary-color;
+            }
+        }
+
+        &-form {
+            h2 {
+                font-weight: 600;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.cursos {
+    margin-bottom: 40px;
+
+    .courses {
+        &-title {
+            @include m.title-style();
+        }
+
+        &-courses {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+
+            &--course {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 0.25fr 1fr;
+                gap: 20px;
+
+                &---title {
+                    grid-area: 1 / 1 / span 1 / span 2;
+                    font-weight: 600;
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            color: v.$secondary-color;
+                        }
+                    }
+                }
+
+                img {
+                    border-radius: 5px;
+                    width: 400px;
+                    height: 300px;
+                }
+
+                &---temario {
+                    background-color: rgba($color: v.$terciary-color, $alpha: 0.1);
+
+                    h4 {
+                        padding-left: 5px;
+                        font-weight: 500;
+                    }
+
+                    ul {
+                        @include m.reset-list();
+
+                        li {
+                            padding-left: 25px;
+                            padding-right: 8px;
+                            padding-bottom: 2px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

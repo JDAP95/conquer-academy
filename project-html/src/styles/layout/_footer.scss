@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as v;
+
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: v.$secondary-color;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

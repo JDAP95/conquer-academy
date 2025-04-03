@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+
+        img {
+            width: 10%;
+        }
+
+        nav {
+            ul {
+                @include m.reset-list();
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+
+                li:first-of-type {
+                    a {
+                        color: v.$primary-color;
+
+                        &:hover {
+                            background-color: v.$primary-color;
+                            color: v.$secondary-color;
+                        }
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 5px;
+
+                    color: rgba($color: v.$primary-color, $alpha: 0.5);
+
+                    &:hover {
+                        background-color: v.$primary-color;
+                        color: v.$secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+
+.quienes-somos {
+    margin-bottom: 40px;
+
+    .description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.7fr;
+        column-gap: 40px;
+
+        &-title {
+            grid-area: 1 / 1 / span 1 / span 2;
+            @include m.title-style();
+        }
+
+        div {
+            img {
+                border-radius: 5px;
+                width: 90%;
+                height: 90%;
+            }
+        }
+
+        &-subtitle {
+            align-self: center;
+        }
+    }
+
+    .objects {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        position: relative;
+        bottom: 80px;
+
+        &-object {
+            &--title {
+                font-size: 20px;
+            }
+
+            &--subtitle {
+                h4 {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
